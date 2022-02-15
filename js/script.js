@@ -55,9 +55,26 @@ Vue.component('edit-form', {
 Vue.component('item-data', {
     data: function() {
         return{
-            col:server_data
+            datos: true,
+            edicion: false,
         }
     },
+    props: ["item"],
+
+    methods:{
+            toggleEditFormVisibility()
+            {
+                    this.datos = false;
+                    this.edicion = true;
+            },
+            formClose()
+            {
+                this.datos = true;
+                this.edicion = false;
+            }
+        
+    },
+
     template: '#itemData'
 })
 
@@ -66,7 +83,8 @@ Vue.component('item-data', {
 var app = new Vue({
     el: '#app',
     data: {
-        col: server_data
+        col: server_data,
+        item:server_data. collection.items
     }
 });
 
