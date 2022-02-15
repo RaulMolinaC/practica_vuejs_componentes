@@ -50,9 +50,14 @@
         <!-- Plantilla para el componente item-data -->
         <script type="text/x-template" id="itemData">
             <div class="card" >
-              
-              </div>
-              <div class="card-body " v-show="edicion">
+                <div class="card-body" v-show="datos">
+                    <dl v-for="d in item.data" :itemdata="d">
+                        <dt>{{d.prompt}}</dt>
+                        <dd>{{d.value}}</dd>       
+                    </dl>
+                </div>
+            </div>
+            <div class="card-body " v-show="edicion">
       
             </div> 
             <!--
