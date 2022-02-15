@@ -49,25 +49,12 @@
 
         <!-- Plantilla para el componente item-data -->
         <script type="text/x-template" id="itemData">
-            <script type="text/x-template" id="itemData">
-                <div class="container">
-                <div class="card-group">
-                    <div class="card" style="width: 18rem;" v-for="item in col.collection.items">
-                        <div class="card-body" v-for="peli in item.data">
-                            <dl>
-                                <dt class="card-title">
-                                    {{ peli.prompt }}
-                                </dt>
-                                <dd>
-                                    {{peli.value}}
-                                </dd>
-                            </dl>
-                        </div>
-                        <a v-bind:href="item.href" class="btn btn-primary">Ver</a>
-                        <button >
-                    </div> 
-                </div> 
-            </div>     
+            <div class="card" >
+              
+              </div>
+              <div class="card-body " v-show="edicion">
+      
+            </div> 
             <!--
                  TODO: Componente item-data
             -->
